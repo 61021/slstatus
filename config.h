@@ -65,7 +65,8 @@ static const char unknown_str[] = "void";
 static const struct arg args[] = {
     /* function                       format                argument */
     // Battery State
-    {run_command, "%s ", "/bin/sh -c \"cat /sys/class/power_supply/BAT0/status | grep -q 'Discharging' && echo '󰂌' || grep -q 'Charging' && echo '󰂏' || echo '󰂏'\""},
+    {battery_state, "%s ", "BAT0"},
+
     // Battery Percentage
     {battery_perc, "%s%%   ", "BAT0"},
 
